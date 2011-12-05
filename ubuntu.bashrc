@@ -2,6 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+set -o vi
 
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -124,6 +125,9 @@ if [[ -n "$PS1" ]] ; then
         . /etc/bash_completion
     fi
 
+    export NODE_PATH=/usr/local/lib/node_modules
+
+    export PATH=$PATH:$HOME/bin
 
     [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 fi
