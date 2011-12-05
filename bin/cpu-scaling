@@ -1,0 +1,19 @@
+#!/bin/sh
+
+GOVERNOR=$1
+
+echo "Current CPU scaling settings: "
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+
+if test "$GOVERNOR" != ""
+then
+    echo "Setting CPU governor to $GOVERNOR..."
+
+    cpufreq-selector -g $GOVERNOR -c 0
+    cpufreq-selector -g $GOVERNOR -c 1
+    cpufreq-selector -g $GOVERNOR -c 2
+    cpufreq-selector -g $GOVERNOR -c 3
+
+    echo "New CPU scaling settings: "
+    cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+fi
