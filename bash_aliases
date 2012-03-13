@@ -10,4 +10,6 @@ alias android-disconnect="fusermount -u /media/GalaxyNexus"
 ## SSH Shortcuts ##
 alias mhf='ssh more-high-fives.org';
 alias asp='ssh -i ~/.ssh/id_rsa.asp rhouston@office.alexanderstreet.co.uk'
-alias tmux=~/bin/tmux-boot.sh
+
+
+alias tmux="tmux -2"
