@@ -9,7 +9,7 @@
 
 message = ARGV[0]
 
-if message =~ /(ryan|r-man)/i
+if message !~ /ChatOutgoing/ && message =~/(ryan|r-man)/i
   `notify-send --icon=/usr/share/skype/avatars/Skype.png '#{ARGV[0]}'`
   `aplay /usr/share/skype/sounds/ChatIncoming.wav`
 end
