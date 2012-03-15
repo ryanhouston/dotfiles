@@ -42,8 +42,12 @@ tmux split-window -h -p 30 -t $SESSION:0
 
 # Custom layouts
 case $LAYOUT in
+"nf")
+  tmux new-window -t $SESSION -a -n mysql "mysql -uroot cruisecontrol";;
+
 "nerdie")
   tmux new-window -t $SESSION -a -n irssi irssi;;
+
 *)
   tmux new-window -t $SESSION -a -n scratch
 esac
