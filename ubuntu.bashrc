@@ -10,12 +10,6 @@ function parse_git_branch {
 
 # If not running interactively, don't do anything
 if [[ -n "$PS1" ]] ; then
-    if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
-    else
-        export TERM='xterm-color'
-    fi
-
 
     # don't put duplicate lines in the history. See bash(1) for more options
     # ... or force ignoredups and ignorespace
@@ -48,7 +42,7 @@ if [[ -n "$PS1" ]] ; then
     # uncomment for a colored prompt, if the terminal has the capability; turned
     # off by default to not distract the user: the focus in a terminal window
     # should be on the output of commands, not on the prompt
-    #force_color_prompt=yes
+    force_color_prompt=yes
 
     if [ -n "$force_color_prompt" ]; then
         if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -80,18 +74,16 @@ if [[ -n "$PS1" ]] ; then
     #git
     source ~/.git-completion.bash
     GIT_PS1_SHOWDIRTYSTATE=true
-    
+
     #modified (colourised) prompt
     #export PS1='\h:\w \e[31m\u\e[0m$'
-    #export PS1='[\t] \h:\w \u\$ ' 
-    
+    #export PS1='[\t] \h:\w \u\$ '
+
     #export PS1='\u@\h:\w \$ '
-    
+
     #git-bash
-    #export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    #export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
     export PS1="$PS1\[\033[1;33m\]\$(__git_ps1)\[\033[00m\]\$ "
-    
+
     # enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
