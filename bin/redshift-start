@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gtk-redshift -l 33.84:-77.30 -t 5700:3600 -m vidmode -v
