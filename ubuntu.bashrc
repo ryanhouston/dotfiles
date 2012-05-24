@@ -123,3 +123,5 @@ if [[ -n "$PS1" ]] ; then
 
     [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
