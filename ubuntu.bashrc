@@ -110,6 +110,9 @@ if [[ -n "$PS1" ]] ; then
         . ~/.bash_aliases
     fi
 
+    # Alias hub for some git sugar
+    eval "$(hub alias -s)"
+
     # enable programmable completion features (you don't need to enable
     # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
     # sources /etc/bash.bashrc).
