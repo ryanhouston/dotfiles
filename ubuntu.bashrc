@@ -72,7 +72,9 @@ if [[ -n "$PS1" ]] ; then
     esac
 
     #git
-    source ~/.git-completion.bash
+    if [ -f ~/.git-completion.bash ]; then
+      source ~/.git-completion.bash
+    fi
     GIT_PS1_SHOWDIRTYSTATE=true
 
     #modified (colourised) prompt
