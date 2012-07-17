@@ -84,7 +84,7 @@ if [[ -n "$PS1" ]] ; then
     #export PS1='\u@\h:\w \$ '
 
     #git-bash
-    export PS1="$PS1\[\033[1;33m\]\$(__git_ps1)\[\033[00m\]\\n$ "
+    export PS1="$PS1\[\033[1;33m\]\$(__git_ps1)\[\033[00m\]\\n\[\033[1;33m\]⚡\[\033[00m\] "
 
     # enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
