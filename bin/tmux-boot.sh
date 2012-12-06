@@ -37,7 +37,7 @@ tmux new-session -d -s $SESSION
 
 # Setup basic layout for the session
 tmux new-window -t $SESSION:0 -k -n codez vi
-tmux split-window -h -p 30 -t $SESSION:0
+tmux split-window -h -p 40 -t $SESSION:0
 
 
 # Custom layouts
