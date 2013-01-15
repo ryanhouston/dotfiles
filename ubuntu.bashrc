@@ -3,6 +3,7 @@
 # for examples
 
 set -o vi
+export EDITOR=vim
 
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -133,3 +134,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+### Add vagrant to path
+export PATH="/opt/vagrant/bin:$PATH"
