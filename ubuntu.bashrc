@@ -136,3 +136,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
 ### Add vagrant to path
 export PATH="/opt/vagrant/bin:$PATH"
+
+### Autocomplete teamocil
+complete -W "$(teamocil --list)" teamocil
+
