@@ -1,0 +1,24 @@
+[user]
+  name = Ryan Houston
+  email = ryanhouston83@gmail.com
+[color]
+  ui = auto
+[core]
+  editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
+  pager = less -r
+[push]
+  default = current
+[branch]
+  autosetupmerge = true
+[github]
+  user = ryanhouston
+[alias]
+  pull = !git pull --prune
+  cl = !~/bin/git-cl
+  ctags = !.git/hooks/ctags
+[web]
+  browser = chromium
+[init]
+  templatedir = ~/.git_template
+
