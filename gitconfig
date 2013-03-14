@@ -15,7 +15,6 @@
   user = ryanhouston
 [alias]
   pull = !git pull --prune
-  cl = !~/bin/git-cl
   ctags = !.git/hooks/ctags
 [web]
   browser = chromium
