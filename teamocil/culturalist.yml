@@ -5,7 +5,7 @@ session:
       clear: true
       root: "~/Projects/culturalist"
       splits:
-        - cmd: "vim"
+        - cmd: "vim -S Session.vim"
         - cmd: "git status"
           width: 50
           focus: true
