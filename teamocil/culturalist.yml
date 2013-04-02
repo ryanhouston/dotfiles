@@ -9,7 +9,7 @@ session:
         - cmd: "git status"
           width: 50
           focus: true
-        - cmd: "vagrant up && vagrant ssh"
+        - cmd: "vagrant up --no-provision && vagrant ssh"
           height: 50
     - name: "rails"
       clear: true
