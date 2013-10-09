@@ -1,8 +1,6 @@
 alias grep='grep --color';
 alias vi='vim';
 alias share-brew='cd /home/ryanh/Documents/ruby/share-brew';
-alias nf='cd /home/ryanh/Workspace/nf';
-alias nf-app='cd /home/ryanh/Workspace/nf/app';
 
 alias android-connect="mtpfs -o allow_other /media/GalaxyNexus"
 alias android-disconnect="fusermount -u /media/GalaxyNexus"
