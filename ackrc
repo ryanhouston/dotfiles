@@ -1,0 +1,4 @@
+--smart-case
+--type-set=cuke=.feature
+--type-add=ruby=.haml
+
