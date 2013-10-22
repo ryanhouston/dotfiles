@@ -1,4 +1,5 @@
 --smart-case
 --type-set=cuke=.feature
 --type-add=ruby=.haml
+--type-add=js=.coffee
 
