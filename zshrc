@@ -5,15 +5,14 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="blinks"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="blinks"
+#ZSH_THEME="robbyrussell"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="vim"
 alias tmux="TERM=screen-256color-bce tmux"
 alias ack="ack-grep"
+alias tmuxa='tmux attach -d -t'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
