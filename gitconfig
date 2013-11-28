@@ -14,10 +14,15 @@
 [github]
   user = ryanhouston
 [alias]
-  pull = !git pull --prune
   ctags = !.git/hooks/ctags
 [web]
   browser = chromium
 [init]
   templatedir = ~/.git_template
+[merge]
+  tool = diffconflicts
+[mergetool "diffconflicts"]
+  cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+  trustExitCode = true
+  keepBackup = false
 
