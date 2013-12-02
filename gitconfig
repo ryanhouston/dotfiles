@@ -25,4 +25,6 @@
   cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
   trustExitCode = true
   keepBackup = false
+[diff]
+  tool = vimdiff
 
