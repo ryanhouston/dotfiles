@@ -1,3 +1,6 @@
+# Use 'solarized' dircolors (https://github.com/seebi/dircolors-solarized.git)
+eval `dircolors ~/.dircolors`
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
