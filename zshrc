@@ -50,7 +50,7 @@ ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(heroku rails3 vagrant vi-mode)
+plugins=(heroku rails vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
