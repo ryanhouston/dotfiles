@@ -14,6 +14,7 @@ ZSH_THEME="blinks"
 # Example aliases
 alias vi="vim"
 alias tmux="TERM=screen-256color-bce tmux"
+alias wemux="TERM=screen-256color-bce wemux"
 alias ack="ack-grep"
 alias tmuxa='tmux attach -d -t'
 
