@@ -16,4 +16,9 @@ session:
       root: "~/Projects/culturalist"
       splits:
         - cmd: "sleep 15 && vagrant ssh"
+    - name: "logs"
+      clear: true
+      root: "~/Projects/culturalist"
+      splits:
+        - cmd: "tail -f log/development.log"
 
