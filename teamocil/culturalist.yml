@@ -4,21 +4,23 @@ session:
     - name: "workbench"
       clear: true
       root: "~/Projects/culturalist"
-      splits:
+      panes:
         - cmd: "vim -S Session.vim"
         - cmd: "git status"
           width: 50
           focus: true
-        - cmd: "vagrant up --no-provision && vagrant ssh"
+        - cmd:
+          - "vagrant up --no-provision && vagrant ssh"
           height: 50
     - name: "rails"
       clear: true
       root: "~/Projects/culturalist"
-      splits:
-        - cmd: "sleep 15 && vagrant ssh"
+      panes:
+        - cmd:
+          - "sleep 15 && vagrant ssh"
     - name: "logs"
       clear: true
       root: "~/Projects/culturalist"
-      splits:
+      panes:
         - cmd: "tail -f log/development.log"
 
