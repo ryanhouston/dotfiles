@@ -58,8 +58,8 @@ source $ZSH/oh-my-zsh.sh
 # teamocil autocomplete
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
-# Customize to your needs...
-export PATH=$PATH:$HOME/local/bin:/opt/vagrant/bin:/usr/local/heroku/bin:/home/rouston/.rbenv/shims:/home/rouston/.rbenv/bin:/home/rouston/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/rouston/bin:/home/rouston/.rvm/bin
-
 export EDITOR=/usr/bin/vim
+export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/opt/vagrant/bin:/usr/local/heroku/bin:$PATH
+
+eval "$(rbenv init -)"
 
