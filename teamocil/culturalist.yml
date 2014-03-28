@@ -10,7 +10,7 @@ session:
           width: 50
           focus: true
         - cmd:
-          - "vagrant up --no-provision && vagrant ssh"
+          - "vagrant up && vagrant ssh"
           height: 50
     - name: "rails"
       clear: true
@@ -18,9 +18,4 @@ session:
       panes:
         - cmd:
           - "sleep 15 && vagrant ssh"
-    - name: "logs"
-      clear: true
-      root: "~/Projects/culturalist"
-      panes:
-        - cmd: "tail -f log/development.log"
 
