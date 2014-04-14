@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 export EDITOR=/usr/bin/vim
-export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/opt/vagrant/bin:/usr/local/heroku/bin:$PATH
+export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH
 
 eval "$(rbenv init -)"
 
