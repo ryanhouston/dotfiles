@@ -4,3 +4,6 @@
 --type-add=js=.coffee
 --ignore-dir=tmp
 
+# Ignore vim ctags file
+--ignore-file=is:tags
+
