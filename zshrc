@@ -8,15 +8,17 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="blinks"
+ZSH_THEME="agnoster"
+#ZSH_THEME="blinks"
 #ZSH_THEME="robbyrussell"
 
-# Example aliases
+# aliases
 alias vi="vim"
 alias tmux="TERM=screen-256color-bce tmux"
 alias wemux="TERM=screen-256color-bce wemux"
 alias ack="ack-grep"
 alias tmuxa='tmux attach -d -t'
+alias todo='vim ~/notes/todo.md'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -51,7 +53,7 @@ ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(heroku rails vagrant vi-mode)
+plugins=(heroku rails vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
