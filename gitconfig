@@ -15,6 +15,7 @@
   user = ryanhouston
 [alias]
   ctags = !.git/hooks/ctags
+  co = checkout
 [web]
   browser = chromium
 [init]
