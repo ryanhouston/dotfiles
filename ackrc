@@ -3,6 +3,7 @@
 --type-add=ruby=.haml
 --type-add=js=.coffee
 --ignore-dir=tmp
+--ignore-dir=log
 
 # Ignore vim ctags file
 --ignore-file=is:tags
