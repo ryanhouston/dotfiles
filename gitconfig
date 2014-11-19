@@ -16,6 +16,7 @@
 [alias]
   ctags = !.git/hooks/ctags
   co = checkout
+  to-deploy = log origin/master..origin/develop --oneline --merges
 [web]
   browser = chromium
 [init]
@@ -32,3 +33,5 @@
 [help]
   autocorrect = 1
 
+[heroku]
+	account = personal
