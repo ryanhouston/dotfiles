@@ -1,0 +1,11 @@
+session:
+  name: "blog"
+  windows:
+    - name: "workbench"
+      clear: true
+      root: "~/Projects/ryanjhouston.com"
+      panes:
+        - cmd: "vim ."
+        - cmd: "git status"
+          width: 50
+

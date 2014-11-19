@@ -1,21 +1,16 @@
-session:
-  name: "culturalist"
-  windows:
-    - name: "workbench"
-      clear: true
-      root: "~/Projects/culturalist"
-      panes:
-        - cmd: "vim -S Session.vim"
-        - cmd: "git status"
-          width: 50
-          focus: true
-        - cmd:
-          - "vagrant up && vagrant ssh"
-          height: 50
-    - name: "rails"
-      clear: true
-      root: "~/Projects/culturalist"
-      panes:
-        - cmd:
-          - "sleep 15 && vagrant ssh"
+name: "culturalist"
+windows:
+  - name: "workbench"
+    root: "~/Projects/culturalist"
+    layout: main-vertical
+    panes:
+      - vim -S Session.vim
+      - commands:
+        - git status
+        focus: true
+      - vagrant up && vagrant ssh
+  - name: "rails"
+    root: "~/Projects/culturalist"
+    panes:
+      - sleep 15 && vagrant ssh
 
