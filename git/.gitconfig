@@ -5,7 +5,6 @@
   ui = auto
 [core]
   editor = /usr/bin/vim
-  excludesfile = ~/.gitignore
   pager = less -r -F -X
 [push]
   default = current
