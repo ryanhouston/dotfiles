@@ -3,17 +3,22 @@
 set -e
 set -x
 
-stow ack-grep
-stow bin
-stow dircolors
-stow git
-stow irssi
-stow ruby
-stow teamocil
-stow tmux
+stow_home () {
+  stow $1 --target=$HOME
+}
+
+stow_home ack-grep
+stow_home ack-grep
+stow_home bin
+stow_home dircolors
+stow_home git
+stow_home irssi
+stow_home ruby
+stow_home teamocil
+stow_home tmux
 
 if test -e ~/.zshrc; then
   mv ~/.zshrc ~/.zshrc.pre-dotfiles
 fi
-stow zsh
+stow_home zsh
 
