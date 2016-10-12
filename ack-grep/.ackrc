@@ -8,3 +8,5 @@
 # Ignore vim ctags file
 --ignore-file=is:tags
 
+# Ignore vim session files
+--ignore-file=is:Session.vim
