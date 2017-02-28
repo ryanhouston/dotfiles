@@ -13,7 +13,6 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # aliases
-alias vi="vim"
 alias tmux="TERM=screen-256color-bce tmux"
 alias wemux="TERM=screen-256color-bce wemux"
 alias ack="ack-grep"
@@ -45,6 +44,8 @@ DISABLE_CORRECTION="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 ZSH_TMUX_FIXTERM_WITH_256COLOR="screen-256color"
 ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
