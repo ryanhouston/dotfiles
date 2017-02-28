@@ -63,5 +63,9 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 export EDITOR=/usr/bin/vim
 export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH
 
+# node.js support
+export PATH=$PATH:$HOME/local/npm/bin
+export NODE_PATH=$NODE_PATH:$HOME/local/npm/lib/node_modules:/usr/lib/node_modules
+
 eval "$(rbenv init -)"
 
