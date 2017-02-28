@@ -34,3 +34,5 @@
 
 [heroku]
 	account = personal
+[difftool]
+	prompt = false
