@@ -1,21 +1,21 @@
-function ctly-staging {
+ctly-staging() {
   heroku accounts:set contactually
-  echo "heroku run rails console --app contactually-staging"
-  heroku run rails console --app contactually-staging;
+  echo "heroku $@ --app contactually-staging"
+  heroku $@ --app contactually-staging;
 }
 
-function ctly-prod {
+ctly-prod() {
   heroku accounts:set contactually
-  echo "heroku run rails console --app contactually"
-  heroku run rails console --app contactually;
+  echo "heroku $@ --app contactually"
+  heroku $@ --app contactually;
 }
 
-function deploy.ctly-staging {
+deploy.ctly-staging() {
   heroku accounts:set contactually
   bundle exec rake ctly:deploy;
 }
 
-function deploy.ctly-prod {
+deploy.ctly-prod() {
   heroku accounts:set contactually
   bundle exec rake ctly:deploy[production];
 }
