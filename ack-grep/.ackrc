@@ -5,6 +5,7 @@
 --ignore-dir=tmp
 --ignore-dir=log
 --ignore-dir=coverage
+--ignore-dir=dist
 
 # Ignore vim ctags file
 --ignore-file=is:tags
