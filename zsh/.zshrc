@@ -62,6 +62,9 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 export EDITOR=/usr/bin/vim
 export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH
 
+# Include local project node_module bin in PATH
+export PATH=./node_modules/.bin:$PATH
+
 eval "$(rbenv init -)"
 
 
