@@ -74,3 +74,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # added by travis gem
 [ -f /home/rouston/.travis/travis.sh ] && source /home/rouston/.travis/travis.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
