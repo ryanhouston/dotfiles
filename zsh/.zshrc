@@ -15,6 +15,7 @@ alias wemux="TERM=screen-256color-bce wemux"
 alias ack="ack-grep"
 alias tmuxa='tmux attach -d -t'
 alias weather="curl wttr.in/'washington, dc'"
+alias open="xdg-open &>/dev/null"
 source $HOME/.contactually.sh
 
 # Set to this to use case-sensitive completion
