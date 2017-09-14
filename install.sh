@@ -20,6 +20,7 @@ stow_home irssi
 stow_home ruby
 stow_home teamocil
 stow_home tmux
+stow_home postgresql
 
 resolve_conflict ~/.zshrc
 stow_home zsh
