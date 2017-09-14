@@ -66,9 +66,12 @@ export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PA
 # Include local project node_module bin in PATH
 export PATH=./node_modules/.bin:$PATH
 
+# Ruby
 eval "$(rbenv init -)"
+RI='--format=ansi'
 
 
+# Node.js
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
