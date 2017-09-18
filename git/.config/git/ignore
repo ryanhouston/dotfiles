@@ -1,4 +1,5 @@
 .irbrc
 Session.vim
+local.reek
 /tags
 
