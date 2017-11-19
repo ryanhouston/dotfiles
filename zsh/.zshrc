@@ -12,8 +12,6 @@ ZSH_THEME="robbyrussell"
 # aliases
 alias tmux="TERM=screen-256color-bce tmux"
 alias wemux="TERM=screen-256color-bce wemux"
-alias ack="ack-grep"
-alias tmuxa='tmux attach -d -t'
 alias weather="curl wttr.in/'washington, dc'"
 alias open="xdg-open &>/dev/null"
 source $HOME/.contactually.sh
@@ -60,8 +58,10 @@ source $ZSH/oh-my-zsh.sh
 # teamocil autocomplete
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH
+
+export PATH=$HOME/.local/bin:$PATH
 
 # Include local project node_module bin in PATH
 export PATH=./node_modules/.bin:$PATH
