@@ -12,3 +12,6 @@
 
 # Ignore vim session files
 --ignore-file=is:Session.vim
+
+# Ignore ruby debugger files
+--ignore-file=is:.byebug_history
