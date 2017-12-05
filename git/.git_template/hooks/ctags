@@ -1,7 +1,10 @@
 #!/bin/sh
+#
+# Configured to use Universal Ctags: https://ctags.io
+
 set -e
 PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/tags.$$" EXIT
-ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=tmp --languages=-javascript,sql
+ctags --format=2 --excmd=pattern --extras= --fields=nksaSmt --tag-relative=yes -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=tmp --languages=-javascript,sql
 mv .git/tags.$$ .git/tags
 
