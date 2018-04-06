@@ -71,11 +71,14 @@ export PATH=./node_modules/.bin:$PATH
 eval "$(rbenv init -)"
 RI='--format=ansi'
 
-
 # Node.js
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Go lang
+export GOPATH=$HOME/Projects/go
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # added by travis gem
 [ -f /home/rouston/.travis/travis.sh ] && source /home/rouston/.travis/travis.sh
