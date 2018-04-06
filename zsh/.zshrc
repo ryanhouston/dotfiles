@@ -52,6 +52,7 @@ ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(heroku rails vi-mode docker docker-compose tmux)
+fpath=(~/.zsh-completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
