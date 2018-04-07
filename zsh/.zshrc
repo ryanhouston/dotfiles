@@ -14,7 +14,6 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias wemux="TERM=screen-256color-bce wemux"
 alias weather="curl wttr.in/'washington, dc'"
 alias open="xdg-open &>/dev/null"
-source $HOME/.contactually.sh
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
