@@ -83,3 +83,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 [ -f /home/rouston/.travis/travis.sh ] && source /home/rouston/.travis/travis.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# z plugin to jump to commonly used dirs
+# https://github.com/rupa/z
+[ -f ~/Projects/z/z.sh ] && source ~/Projects/z/z.sh
