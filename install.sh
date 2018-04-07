@@ -18,7 +18,6 @@ stow_home bin
 stow_home git
 stow_home irssi
 stow_home ruby
-stow_home teamocil
 stow_home tmux
 stow_home postgresql
 

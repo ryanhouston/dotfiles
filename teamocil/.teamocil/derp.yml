@@ -1,8 +1,0 @@
-session:
-  name: "derp"
-  windows:
-    - name: "workbench"
-      root: "~"
-      panes:
-        - cmd: "vim ~/Documents/sync/wiki/index.md"
-        - width: 50
