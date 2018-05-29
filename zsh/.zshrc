@@ -87,3 +87,6 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # z plugin to jump to commonly used dirs
 # https://github.com/rupa/z
 [ -f ~/Projects/z/z.sh ] && source ~/Projects/z/z.sh
+
+# arduino
+export ARDUINO_PATH=/usr/local/arduino
