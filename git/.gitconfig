@@ -1,26 +1,20 @@
 [user]
   name = Ryan Houston
   email = ryanhouston83@gmail.com
-[color]
-  ui = auto
-[core]
-  editor = /usr/bin/vim
-  pager = less -r -F -X
+[help]
+  autocorrect = 1
+[init]
+  templatedir = ~/.git_template
 [push]
   default = current
-[branch]
-  autosetupmerge = true
-[github]
-  user = ryanhouston
 [alias]
   ctags = !.git/hooks/ctags
   co = checkout
   to-deploy = log origin/master..origin/develop --oneline --merges
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[web]
-  browser = chromium
-[init]
-  templatedir = ~/.git_template
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  pp = pull --prune
+[core]
+  pager = "less -rFX"
 [merge]
   tool = diffconflicts
 [mergetool "diffconflicts"]
@@ -29,11 +23,11 @@
   keepBackup = false
 [diff]
   tool = vimdiff
-
-[help]
-  autocorrect = 1
-
-[heroku]
-	account = personal
 [difftool]
 	prompt = false
+[github]
+  user = ryanhouston
+[heroku]
+  account = personal
+[web]
+  browser = chromium
