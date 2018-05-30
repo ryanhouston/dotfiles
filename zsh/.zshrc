@@ -50,7 +50,21 @@ ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(heroku rails vi-mode docker docker-compose tmux)
+plugins=(
+  colored-man-pages
+  colorize
+  docker
+  docker-compose
+  git
+  golang
+  heroku
+  httpie
+  rails
+  rsync
+  tmux
+  vi-mode
+  zsh_reload
+)
 fpath=(~/.zsh-completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
