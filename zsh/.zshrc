@@ -5,9 +5,21 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="agnoster"
-#ZSH_THEME="blinks"
-ZSH_THEME="robbyrussell"
+
+ZSH_THEME="spaceship"
+SPACESHIP_TIME_SHOW="true"
+SPACESHIP_PROMPT_ORDER=(
+  time
+  user
+  dir
+  host
+  git
+  exec_time
+  line_sep
+  vi_mode
+  exit_code
+  char
+)
 
 # aliases
 alias tmux="TERM=screen-256color-bce tmux"
@@ -31,7 +43,7 @@ alias open="xdg-open &>/dev/null"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want to disable command autocorrection
-DISABLE_CORRECTION="true"
+# DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -56,14 +68,17 @@ plugins=(
   docker
   docker-compose
   git
+  github
   golang
   heroku
   httpie
-  rails
+#  rails
   rsync
   tmux
   vi-mode
   zsh_reload
+  # zsh-autosuggestion
+  zsh-syntax-highlighting
 )
 fpath=(~/.zsh-completions $fpath)
 
