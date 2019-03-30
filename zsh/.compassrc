@@ -1,0 +1,25 @@
+#################
+# urbancompass
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home
+export PATH="/usr/local/bin:${PATH}"
+export PATH="/usr/local/opt/python@2/bin:$PATH"
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+export CREDENTIALS_FILE=/Users/ryanhouston/credentials
+export GITROOT=$HOME/development
+export IGNORE_PYTHON_VERSION_REQUIREMENT=true
+
+################
+# uc-frontend
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f $HOME/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ryanhouston/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f $HOME/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ryanhouston/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/sls.zsh
+
+################
+# enforcery
+
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"

@@ -113,3 +113,6 @@ command -v go && export PATH=$PATH:$(go env GOPATH)/bin
 
 # arduino
 export ARDUINO_PATH=/usr/local/arduino
+
+# compass env
+[ -f ~/.compassrc ] && source ~/.compassrc
