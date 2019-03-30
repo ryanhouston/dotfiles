@@ -15,6 +15,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias wemux="TERM=screen-256color-bce wemux"
 alias weather="curl wttr.in/'washington, dc'"
 alias open="xdg-open &>/dev/null"
+[ -f /usr/local/bin/ctags ] && alias ctags=/usr/local/bin/ctags
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -80,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # teamocil autocomplete
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
-export EDITOR=/usr/bin/nvim
+export EDITOR=`which nvim`
 export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH
 
 export PATH=$HOME/.local/bin:$PATH
@@ -99,7 +100,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go lang
 export GOPATH=$HOME/Projects/go
-export PATH=$PATH:$(go env GOPATH)/bin
+command -v go && export PATH=$PATH:$(go env GOPATH)/bin
 
 # added by travis gem
 [ -f /home/rouston/.travis/travis.sh ] && source /home/rouston/.travis/travis.sh
