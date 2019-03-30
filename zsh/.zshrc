@@ -66,6 +66,7 @@ plugins=(
   rsync
   tmux
   vi-mode
+  z
   zsh_reload
   # zsh-autosuggestion
   zsh-syntax-highlighting
