@@ -5,6 +5,6 @@
 set -e
 PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/tags.$$" EXIT
-ctags --format=2 --excmd=pattern --extras= --fields=nksaSmt --tag-relative=yes -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=tmp --languages=-javascript,sql
+ctags --format=2 --excmd=pattern --fields=nksaSmt --tag-relative=yes -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=tmp --languages=-javascript,sql
 mv .git/tags.$$ .git/tags
 
