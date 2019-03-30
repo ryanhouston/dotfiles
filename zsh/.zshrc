@@ -6,20 +6,9 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="spaceship"
-SPACESHIP_TIME_SHOW="true"
-SPACESHIP_PROMPT_ORDER=(
-  time
-  user
-  dir
-  host
-  git
-  exec_time
-  line_sep
-  vi_mode
-  exit_code
-  char
-)
+ZSH_THEME="robbyrussell"
+# Add timestamp to right end of prompt
+RPROMPT="%{$fg_bold[yellow]%}%* "
 
 # aliases
 alias tmux="TERM=screen-256color-bce tmux"
