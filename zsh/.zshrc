@@ -117,3 +117,6 @@ export ARDUINO_PATH=/usr/local/arduino
 
 # compass env
 [ -f ~/.compassrc ] && source ~/.compassrc
+
+# store secret API tokens and such in ~/.localrc to keep it out of the git repo
+[ -f ~/.localrc ] && source ~/.localrc
