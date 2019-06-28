@@ -101,7 +101,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go lang
 export GOPATH=$HOME/Projects/go
-command -v go && export PATH=$PATH:$(go env GOPATH)/bin
+command -v go > /dev/null && export PATH=$PATH:$(go env GOPATH)/bin
 
 # added by travis gem
 [ -f /home/rouston/.travis/travis.sh ] && source /home/rouston/.travis/travis.sh
@@ -120,3 +120,4 @@ export ARDUINO_PATH=/usr/local/arduino
 
 # store secret API tokens and such in ~/.localrc to keep it out of the git repo
 [ -f ~/.localrc ] && source ~/.localrc
+export PATH="/usr/local/sbin:$PATH"
