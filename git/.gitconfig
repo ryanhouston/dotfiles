@@ -13,6 +13,7 @@
   to-deploy = log origin/master..origin/develop --oneline --merges
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pp = pull --prune
+  dt = "!f() { nvim -Rp $(git diff --name-only $@..) +\"tabdo Gdiff $@\" +tabfirst; }; f"
 [core]
   pager = "less -rFX"
 [merge]
