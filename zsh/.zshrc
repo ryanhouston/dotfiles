@@ -102,6 +102,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go lang
 export GOPATH=$HOME/Projects/go
+export CGO_ENABLED=0
 command -v go > /dev/null && export PATH=$PATH:$(go env GOPATH)/bin
 
 # added by travis gem
