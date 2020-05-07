@@ -49,6 +49,9 @@ EOF
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f $HOME/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ryanhouston/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f $HOME/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/ryanhouston/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/slss.zsh
 
 ################
 # enforcery
