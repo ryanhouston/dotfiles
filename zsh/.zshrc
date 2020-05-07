@@ -7,8 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 ZSH_THEME="robbyrussell"
-# Add timestamp to right end of prompt
-RPROMPT="%{$fg_bold[yellow]%}%* "
 
 # aliases
 alias tmux="TERM=screen-256color-bce tmux"
@@ -78,6 +76,9 @@ if type brew &>/dev/null; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+# Add timestamp to right end of prompt
+PROMPT="%{$fg_bold[yellow]%}%* $PROMPT "
 
 # teamocil autocomplete
 compctl -g '~/.teamocil/*(:t:r)' teamocil
