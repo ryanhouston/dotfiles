@@ -9,6 +9,37 @@ export CREDENTIALS_FILE=/Users/ryanhouston/credentials
 export GITROOT=$HOME/development
 export IGNORE_PYTHON_VERSION_REQUIREMENT=true
 
+alias ucgo='eval $($GITROOT/urbancompass/scripts/go activate)'
+ucgo
+
+function ucrctag() {
+  local app=$1
+  local datepart=$(date -u +"%Y%m%d-%H%M%S")
+
+  echo "$datepart-$app-rc1"
+}
+
+function ucchanges() {
+  local tag=$1
+  local app=$2
+
+  #if [  -n "${!tag}" || -n "${!app}" ]; then;
+  if [[ ! "$tag" || ! "$app" ]]; then;
+    cat <<"EOF"
+Provide deploy tag prefix and app: ucchanges tag app
+
+Show changes in compass.com/contacts since the last Contacts Jobs RC.
+  ucchanges contacts-jobs-rc contacts
+EOF
+
+  return 1
+  fi
+
+  local lastrctag=$(git tag | grep $tag | sort | tail -n1)
+  echo "Checking for changes to $app since $lastrctag.."
+  git log $lastrctag..origin/master -- src/go/compass.com/$app
+}
+
 ################
 # uc-frontend
 
