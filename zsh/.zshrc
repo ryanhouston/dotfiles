@@ -121,7 +121,7 @@ command -v go > /dev/null && export PATH=$PATH:$(go env GOPATH)/bin
 export ARDUINO_PATH=/usr/local/arduino
 
 # compass env
-[ -f ~/.compassrc ] && source ~/.compassrc
+[ -f ~/.compassrc ] && [ -d $HOME/development/urbancompass ] && source ~/.compassrc
 
 # store secret API tokens and such in ~/.localrc to keep it out of the git repo
 [ -f ~/.localrc ] && source ~/.localrc

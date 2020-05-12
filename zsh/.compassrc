@@ -9,7 +9,7 @@ export CREDENTIALS_FILE=/Users/ryanhouston/credentials
 export GITROOT=$HOME/development
 export IGNORE_PYTHON_VERSION_REQUIREMENT=true
 
-alias ucgo='eval $($GITROOT/urbancompass/scripts/go activate)'
+alias ucgo='[ -f $GITROOT/urbancompass/scripts/go ] && eval $($GITROOT/urbancompass/scripts/go activate)'
 ucgo
 
 function ucrctag() {
