@@ -41,8 +41,11 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 ZSH_TMUX_FIXTERM_WITH_256COLOR="screen-256color"
 ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
@@ -92,7 +95,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 
 # Ruby
-eval "$(rbenv init -)"
+command -v rbenv > /dev/null && eval "$(rbenv init -)"
 RI='--format=ansi'
 
 # Node.js
