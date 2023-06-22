@@ -1,3 +1,4 @@
 tmux/.tmux/plugins
 tmux/.tmux/resurrect
+.DS_STORE
 
