@@ -14,8 +14,10 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pp = pull --prune
   dt = "!f() { nvim -Rp $(git diff --name-only $@..) +\"tabdo Gdiff $@\" +tabfirst; }; f"
+  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 [core]
   pager = "less -rFX"
+	attributesfile = /Users/ryanhouston/.gitattributes
 [merge]
   tool = diffconflicts
 [mergetool "diffconflicts"]
@@ -32,3 +34,7 @@
   account = personal
 [web]
   browser = chromium
+[pull]
+	ff = only
+[url "git@github.com:"]
+	insteadOf = https://github.com/
