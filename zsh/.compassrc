@@ -1,3 +1,4 @@
+# vi: ft=zsh
 #################
 # urbancompass
 
@@ -8,9 +9,18 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 export CREDENTIALS_FILE=/Users/ryanhouston/credentials
 export GITROOT=$HOME/development
 export IGNORE_PYTHON_VERSION_REQUIREMENT=true
+export UC_ROOT=$HOME/development/urbancompass
 
 alias ucgo='[ -f $GITROOT/urbancompass/scripts/go ] && eval $($GITROOT/urbancompass/scripts/go activate)'
-ucgo
+eval $($GITROOT/urbancompass/scripts/go activate)
+
+#-------------
+# compass cli
+alias cx="compass"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/compass compass
+#-------------
 
 function ucrctag() {
   local app=$1
@@ -23,8 +33,10 @@ function ucchanges() {
   local tag=$1
   local app=$2
 
-  #if [  -n "${!tag}" || -n "${!app}" ]; then;
-  if [[ ! "$tag" || ! "$app" ]]; then;
+  echo "TAG: $tag"
+  echo "APP: $app"
+  if [[  -v $tag || -v $app ]]; then;
+  #if [[ !"$tag" || !"$app" ]]; then
     cat <<"EOF"
 Provide deploy tag prefix and app: ucchanges tag app
 
@@ -35,11 +47,34 @@ EOF
   return 1
   fi
 
-  local lastrctag=$(git tag | grep $tag | sort | tail -n1)
+  local lastrctag=$(git tag --sort=v:refname | grep $tag | sort | tail -n1)
   echo "Checking for changes to $app since $lastrctag.."
   git log $lastrctag..origin/master -- src/go/compass.com/$app
 }
 
+function kafka_tunnels_create() {
+  local environment=$1
+
+  echo "Creating tunnel to Kafka schema registry [$environment]..."
+  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.create-schema-registry-tunnel --environment=$environment
+
+  echo "\nCreating tunnel to CRM Kafka cluster [$environment]..."
+  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.create-cluster-tunnel \
+    --cluster=contacts \
+    --environment=$environment \
+    --profile=compass-crmrole
+    #--bootstrap-servers='b-1.contacts-beta.ttpkhq.c12.kafka.us-east-1.amazonaws.com:9092,b-2.contacts-beta.ttpkhq.c12.kafka.us-east-1.amazonaws.com:9092,b-3.contacts-beta.ttpkhq.c12.kafka.us-east-1.amazonaws.com:9092'
+}
+
+function kafka_tunnels_destroy() {
+  local environment=$1
+
+  echo "Destroying tunnel to CRM Kafka cluster [$environment]..."
+  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.destroy-cluster-tunnel --cluster=contacts --environment=$environment --profile=compass-crmadminrole
+
+  echo "\nDestroying tunnel to Kafka schema registry [$environment]..."
+  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.destroy-schema-registry-tunnel --environment=$environment
+}
 ################
 # uc-frontend
 
@@ -57,3 +92,8 @@ EOF
 # enforcery
 
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+
+# python support
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

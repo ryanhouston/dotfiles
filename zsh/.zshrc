@@ -9,10 +9,10 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # aliases
-alias tmux="TERM=screen-256color-bce tmux"
+#alias tmux="TERM=screen-256color-bce tmux"
 alias wemux="TERM=screen-256color-bce wemux"
 alias weather="curl wttr.in/'washington, dc'"
-alias open="xdg-open &>/dev/null"
+#alias open="xdg-open &>/dev/null"
 [ -f /usr/local/bin/ctags ] && alias ctags=/usr/local/bin/ctags
 
 # Set to this to use case-sensitive completion
@@ -65,10 +65,9 @@ plugins=(
   httpie
 #  rails
   rsync
-  tmux
+  # tmux
   vi-mode
   z
-  zsh_reload
   # zsh-autosuggestion
   zsh-syntax-highlighting
 )
@@ -79,6 +78,10 @@ if type brew &>/dev/null; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+# Use ESC-v to edit command in $EDITOR
+bindkey -M vicmd v edit-command-line
+
 
 # Add timestamp to right end of prompt
 PROMPT="%{$fg_bold[yellow]%}%* $PROMPT "
@@ -105,7 +108,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go lang
 export GOPATH=$HOME/Projects/go
-export CGO_ENABLED=0
 command -v go > /dev/null && export PATH=$PATH:$(go env GOPATH)/bin
 
 # added by travis gem
