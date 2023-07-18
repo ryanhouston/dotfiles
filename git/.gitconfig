@@ -6,15 +6,17 @@
 [init]
   templatedir = ~/.git_template
 [push]
-  default = current
+	default = current
 [alias]
   ctags = !.git/hooks/ctags
   co = checkout
   to-deploy = log origin/master..origin/develop --oneline --merges
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --oneline --color --graph --decorate --all
   pp = pull --prune
   dt = "!f() { nvim -Rp $(git diff --name-only $@..) +\"tabdo Gdiff $@\" +tabfirst; }; f"
   wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+	shove = push --force-with-lease
+	lgg = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [core]
   pager = "less -rFX"
 	attributesfile = /Users/ryanhouston/.gitattributes
@@ -36,5 +38,10 @@
   browser = chromium
 [pull]
 	ff = only
+	rebase = true
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[branch]
+	autosetuprebase = always
+[rebase]
+	autoStash = true
