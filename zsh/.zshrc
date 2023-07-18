@@ -45,7 +45,7 @@ DISABLE_AUTO_TITLE="true"
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+        source "$BASE16_SHELL/profile_helper.sh"
 
 ZSH_TMUX_FIXTERM_WITH_256COLOR="screen-256color"
 ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
