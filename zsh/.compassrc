@@ -5,11 +5,15 @@
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/opt/python@2/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export IGNORE_PYTHON_VERSION_REQUIREMENT="1"  ##compass5ea843
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"  ##compass5ea843
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 export CREDENTIALS_FILE=/Users/ryanhouston/credentials
 export GITROOT=$HOME/development
-export IGNORE_PYTHON_VERSION_REQUIREMENT=true
 export UC_ROOT=$HOME/development/urbancompass
+export HNVM_NODE=16.13.1
 
 alias ucgo='[ -f $GITROOT/urbancompass/scripts/go ] && eval $($GITROOT/urbancompass/scripts/go activate)'
 eval $($GITROOT/urbancompass/scripts/go activate)
