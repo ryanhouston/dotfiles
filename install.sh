@@ -3,7 +3,7 @@
 set -e
 set -x
 
-stow_home () {
+stow_home() {
   stow $1 --target=$HOME
 }
 
@@ -21,4 +21,3 @@ stow_home postgresql
 
 resolve_conflict ~/.zshrc
 stow_home zsh
-
