@@ -9,8 +9,6 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # aliases
-#alias tmux="TERM=screen-256color-bce tmux"
-alias wemux="TERM=screen-256color-bce wemux"
 alias weather="curl wttr.in/'washington, dc'"
 #alias open="xdg-open &>/dev/null"
 [ -f /usr/local/bin/ctags ] && alias ctags=/usr/local/bin/ctags
@@ -46,9 +44,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         source "$BASE16_SHELL/profile_helper.sh"
-
-ZSH_TMUX_FIXTERM_WITH_256COLOR="screen-256color"
-ZSH_TMUX_FIXTERM_WITHOUT_256COLOR="screen-256color"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -89,7 +84,10 @@ PROMPT="%{$fg_bold[yellow]%}%* $PROMPT "
 # teamocil autocomplete
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
+# neovim
+export NVIM_APPNAME=lazyvim
 export EDITOR=`which nvim`
+
 export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH
 
 export PATH=$HOME/.local/bin:$PATH
@@ -128,3 +126,5 @@ export ARDUINO_PATH=/usr/local/arduino
 # store secret API tokens and such in ~/.localrc to keep it out of the git repo
 [ -f ~/.localrc ] && source ~/.localrc
 export PATH="/usr/local/sbin:$PATH"
+
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"

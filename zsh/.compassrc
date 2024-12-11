@@ -13,7 +13,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 export CREDENTIALS_FILE=/Users/ryanhouston/credentials
 export GITROOT=$HOME/development
 export UC_ROOT=$HOME/development/urbancompass
-export HNVM_NODE=16.13.1
+export HOMEBREW_ARTIFACT_DOMAIN=https://artifacts.compass-tech.net/repository/homebrew
 
 alias ucgo='[ -f $GITROOT/urbancompass/scripts/go ] && eval $($GITROOT/urbancompass/scripts/go activate)'
 eval $($GITROOT/urbancompass/scripts/go activate)
