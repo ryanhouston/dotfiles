@@ -1,9 +1,18 @@
+[env]
+TERM = "xterm-256color"
+
 [font]
-size = 10
-normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
-bold = { family = "FiraCode Nerd Font Mono", style = "Bold" }
-italic = { family = "FiraCode Nerd Font Mono", style = "Italic" }
+size = 12
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
 
 [window]
 dimensions.columns = 120
 dimensions.lines = 40
+
+padding.x = 10
+padding.y = 10
+
+opacity = 0.9
+blur = true
