@@ -1,0 +1,9 @@
+[font]
+size = 10
+normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+bold = { family = "FiraCode Nerd Font Mono", style = "Bold" }
+italic = { family = "FiraCode Nerd Font Mono", style = "Italic" }
+
+[window]
+dimensions.columns = 120
+dimensions.lines = 40
