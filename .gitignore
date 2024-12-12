@@ -1,4 +1,5 @@
 tmux/.tmux/plugins
 tmux/.tmux/resurrect
+alacritty/.config/alacritty/alacritty-themes
 .DS_STORE
 
