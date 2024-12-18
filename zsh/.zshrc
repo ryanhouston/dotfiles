@@ -49,6 +49,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
+  asdf
   colored-man-pages
   colorize
   docker
