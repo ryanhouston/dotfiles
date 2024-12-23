@@ -89,9 +89,7 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 export NVIM_APPNAME=lazyvim
 export EDITOR=`which nvim`
 
-export PATH=$HOME/bin:$HOME/local/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH
-
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 # Include local project node_module bin in PATH
 export PATH=./node_modules/.bin:$PATH
@@ -126,6 +124,6 @@ export ARDUINO_PATH=/usr/local/arduino
 
 # store secret API tokens and such in ~/.localrc to keep it out of the git repo
 [ -f ~/.localrc ] && source ~/.localrc
-export PATH="/usr/local/sbin:$PATH"
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+typeset -U PATH
