@@ -16,6 +16,7 @@ resolve_conflict() {
 stow_home ack-grep
 stow_home alacritty
 stow_home bin
+stow_home ghostty
 stow_home git
 stow_home tmux
 stow_home postgresql
