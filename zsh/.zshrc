@@ -88,7 +88,6 @@ PROMPT="%{$fg_bold[yellow]%}%* $PROMPT "
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 # neovim
-export NVIM_APPNAME=lazyvim
 export EDITOR=`which nvim`
 
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
