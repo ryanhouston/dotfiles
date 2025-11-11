@@ -39,8 +39,6 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-. "$HOME/.asdf/asdf.sh"
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 # [ -n "$PS1" ] && \
