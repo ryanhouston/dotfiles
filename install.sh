@@ -18,8 +18,9 @@ stow_home alacritty
 stow_home bin
 stow_home ghostty
 stow_home git
-stow_home tmux
+stow_home opencode
 stow_home postgresql
+stow_home tmux
 
 resolve_conflict ~/.zshrc
 stow_home zsh
