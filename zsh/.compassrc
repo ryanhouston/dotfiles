@@ -16,7 +16,6 @@ export UC_ROOT=$HOME/development/urbancompass
 export HNVM_QUIET=true
 export PATH=/Users/ryan.houston/development/application-infrastructure/.venv/bin:$PATH
 
-alias ucgo='[ -f $GITROOT/urbancompass/scripts/go ] && eval $($GITROOT/urbancompass/scripts/go activate)'
 eval $($GITROOT/urbancompass/scripts/go activate)
 
 #-------------
@@ -27,59 +26,6 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/compass compass
 #-------------
 
-function ucrctag() {
-  local app=$1
-  local datepart=$(date -u +"%Y%m%d-%H%M%S")
-
-  echo "$datepart-$app-rc1"
-}
-
-function ucchanges() {
-  local tag=$1
-  local app=$2
-
-  echo "TAG: $tag"
-  echo "APP: $app"
-  if [[  -v $tag || -v $app ]]; then;
-  #if [[ !"$tag" || !"$app" ]]; then
-    cat <<"EOF"
-Provide deploy tag prefix and app: ucchanges tag app
-
-Show changes in compass.com/contacts since the last Contacts Jobs RC.
-  ucchanges contacts-jobs-rc contacts
-EOF
-
-  return 1
-  fi
-
-  local lastrctag=$(git tag --sort=v:refname | grep $tag | sort | tail -n1)
-  echo "Checking for changes to $app since $lastrctag.."
-  git log $lastrctag..origin/master -- src/go/compass.com/$app
-}
-
-function kafka_tunnels_create() {
-  local environment=$1
-
-  echo "Creating tunnel to Kafka schema registry [$environment]..."
-  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.create-schema-registry-tunnel --environment=$environment
-
-  echo "\nCreating tunnel to CRM Kafka cluster [$environment]..."
-  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.create-cluster-tunnel \
-    --cluster=contacts \
-    --environment=$environment \
-    --profile=compass-crmrole
-    #--bootstrap-servers='b-1.contacts-beta.ttpkhq.c12.kafka.us-east-1.amazonaws.com:9092,b-2.contacts-beta.ttpkhq.c12.kafka.us-east-1.amazonaws.com:9092,b-3.contacts-beta.ttpkhq.c12.kafka.us-east-1.amazonaws.com:9092'
-}
-
-function kafka_tunnels_destroy() {
-  local environment=$1
-
-  echo "Destroying tunnel to CRM Kafka cluster [$environment]..."
-  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.destroy-cluster-tunnel --cluster=contacts --environment=$environment --profile=compass-crmadminrole
-
-  echo "\nDestroying tunnel to Kafka schema registry [$environment]..."
-  $HOME/development/urbancompass/scripts/fab2 kafka.tasks.destroy-schema-registry-tunnel --environment=$environment
-}
 ################
 # uc-frontend
 
@@ -92,11 +38,6 @@ function kafka_tunnels_destroy() {
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f $HOME/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/ryanhouston/development/uc-frontend/scripts/node_modules/.npm-registry.compass.com/tabtab/2.2.2/node_modules/tabtab/.completions/slss.zsh
-
-################
-# enforcery
-
-export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 
 # python support
 if command -v pyenv 1>/dev/null 2>&1; then
