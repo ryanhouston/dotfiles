@@ -1,0 +1,11 @@
+# Ripgrep config
+# See https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
+
+# Search hidden files by default
+--hidden
+
+# Always use case-insensitive / smart-case
+--smart-case
+
+# Exclude .git internal dirs
+--glob=!.git/*
