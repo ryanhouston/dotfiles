@@ -125,4 +125,5 @@ export ARDUINO_PATH=/usr/local/arduino
 [ -f ~/.localrc ] && source ~/.localrc
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export EZA_ICONS_AUTO=true
 typeset -U PATH
