@@ -127,3 +127,6 @@ export ARDUINO_PATH=/usr/local/arduino
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export EZA_ICONS_AUTO=true
 typeset -U PATH
+
+# opencode
+export PATH=/home/rouston/.opencode/bin:$PATH
