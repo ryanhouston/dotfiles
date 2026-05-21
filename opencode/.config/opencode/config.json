@@ -1,9 +1,12 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": true,
-  "model": "anthropic/claude-sonnet-4-20250514",
-  "small_model": "anthropic/claude-3-5-haiku-20241022",
+  "model": "anthropic/claude-sonnet-4-6",
+  "small_model": "anthropic/claude-haiku-4-5",
   "share": "manual",
+  "default_agent": "plan",
+  "lsp": true,
+  "plugin": ["./model-pricing.ts"],
   "tools": {
     "read": true,
     "write": true,
@@ -22,7 +25,7 @@
       "az *": "deny",
       "gcloud *": "deny",
       "kubectl *": "deny",
-      "docker *": "deny",
+      "docker *": "ask",
       "sudo *": "deny",
       "rm -rf *": "deny",
       "chmod +x *": "ask",
@@ -43,4 +46,3 @@
     }
   }
 }
-
