@@ -130,3 +130,6 @@ typeset -U PATH
 
 # opencode
 export PATH=/home/rouston/.opencode/bin:$PATH
+
+# docker-rootless
+[ -f "$(which dockerd-rootless.sh)" ] && export DOCKER_HOST=unix:///run/user/$(id -u)/docker.sock
