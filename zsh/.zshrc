@@ -55,7 +55,7 @@ plugins=(
   docker
   docker-compose
   git
-  github
+  gh
   golang
   heroku
   httpie
