@@ -133,3 +133,27 @@ export PATH=/home/rouston/.opencode/bin:$PATH
 
 # docker-rootless
 [ -f "$(which dockerd-rootless.sh)" ] && export DOCKER_HOST=unix:///run/user/$(id -u)/docker.sock
+
+# fix macos 15 bug where TMPDIR is not writable
+export TMPDIR=$(getconf DARWIN_USER_TEMP_DIR)
+
+# pnpm
+export PNPM_HOME="/Users/ryan.houston/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export AWS_CA_BUNDLE="/Users/ryan.houston/.mdm/certificates/combined-ca-bundle.pem"
+export NODE_EXTRA_CA_CERTS="/Users/ryan.houston/.mdm/certificates/combined-ca-bundle.pem"
+export GOOGLE_CLOUD_PROJECT="gemini-enterprise-485614"  ##compass5ea843
+export GOOGLE_CLOUD_LOCATION="global"  ##compass5ea843
+unset ANTHROPIC_VERTEX_PROJECT_ID  ##compass5ea843
+unset CLAUDE_CODE_USE_VERTEX  ##compass5ea843
+unset CLOUD_ML_REGION  ##compass5ea843
+export PATH="$PATH:/Users/ryan.houston/.local/bin:/Users/ryan.houston/.opencode/bin"  ##compass5ea843
+alias claude='HNVM_NODE=22.14.0 command claude'  ##compass5ea843
+alias gemini='HNVM_NODE=22.14.0 command gemini'  ##compass5ea843
+alias opencode='HNVM_NODE=22.14.0 command opencode'  ##compass5ea843
+alias aicodemetricsd='HNVM_NODE=26.3.0 /usr/local/bin/aicodemetricsd'  ##compass5ea843

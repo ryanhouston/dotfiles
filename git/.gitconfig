@@ -1,6 +1,6 @@
 [user]
-  name = Ryan Houston
-  email = ryanhouston83@gmail.com
+	name = Ryan Houston
+	email = ryan.houston@compass.com
 [help]
   autocorrect = 1
 [init]
@@ -20,7 +20,8 @@
 	lgg = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [core]
   pager = "less -rFX"
-	attributesfile = /Users/ryanhouston/.gitattributes
+	attributesfile = /Users/ryan.houston/.gitattributes
+	excludesfile = /Users/ryan.houston/.gitignore_global
 [merge]
   tool = diffconflicts
 [mergetool "diffconflicts"]
@@ -46,3 +47,5 @@
 	autosetuprebase = always
 [rebase]
 	autoStash = true
+[http]
+	sslCAInfo = /Users/ryan.houston/.mdm/certificates/combined-ca-bundle.pem

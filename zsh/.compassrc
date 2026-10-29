@@ -16,7 +16,7 @@ export UC_ROOT=$HOME/development/urbancompass
 export HNVM_QUIET=true
 export PATH=/Users/ryan.houston/development/application-infrastructure/.venv/bin:$PATH
 
-eval $($GITROOT/urbancompass/scripts/go activate)
+#eval $($GITROOT/urbancompass/scripts/go activate)
 
 #-------------
 # compass cli
