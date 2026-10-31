@@ -6,7 +6,6 @@
   "share": "manual",
   "default_agent": "plan",
   "lsp": true,
-  "plugin": ["./model-pricing.ts"],
   "tools": {
     "read": true,
     "write": true,
