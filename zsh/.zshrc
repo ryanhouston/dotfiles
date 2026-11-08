@@ -130,7 +130,7 @@ export PATH=/home/rouston/.opencode/bin:$PATH
 [ -f "$(which dockerd-rootless.sh)" ] && export DOCKER_HOST=unix:///run/user/$(id -u)/docker.sock
 
 # fix macos 15 bug where TMPDIR is not writable
-export TMPDIR=$(getconf DARWIN_USER_TEMP_DIR)
+[ $(uname -s) = 'Darwin' ] && export TMPDIR=$(getconf DARWIN_USER_TEMP_DIR)
 
 # pnpm
 export PNPM_HOME="/Users/ryan.houston/Library/pnpm"
