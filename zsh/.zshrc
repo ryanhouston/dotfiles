@@ -59,12 +59,8 @@ plugins=(
   golang
   heroku
   httpie
-#  rails
   rsync
-  # tmux
   vi-mode
-  z
-  # zsh-autosuggestion
   zsh-syntax-highlighting
 )
 
@@ -111,9 +107,8 @@ command -v go > /dev/null && export PATH=$PATH:$(go env GOPATH)/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# z plugin to jump to commonly used dirs
-# https://github.com/rupa/z
-[ -f ~/Projects/z/z.sh ] && source ~/Projects/z/z.sh
+# zoxide
+eval "$(zoxide init zsh)"
 
 # arduino
 export ARDUINO_PATH=/usr/local/arduino
