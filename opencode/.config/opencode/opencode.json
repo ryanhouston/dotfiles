@@ -143,5 +143,16 @@
       "resource": "tail",
       "effect": "allow"
     }
-  ]
+  ],
+  "mcp": {
+    "servers": {
+      "browse": {
+        "type": "local",
+        "command": ["/home/rouston/.local/bin/browse", "mcp"],
+        "environment": {
+          "OPENCODE_BROWSER_RUNTIME": "auto-update"
+        }
+      }
+    }
+  }
 }
