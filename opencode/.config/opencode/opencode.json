@@ -56,7 +56,7 @@
     {
       "action": "shell",
       "resource": "sudo *",
-      "effect": "deny"
+      "effect": "ask"
     },
     {
       "action": "shell",
