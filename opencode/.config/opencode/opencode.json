@@ -3,6 +3,15 @@
   "default_agent": "plan",
   "update": "auto",
   "share": "manual",
+  "watcher": {
+    "ignore": [
+      "**/.git/**",
+      "**/node_modules/**",
+      "**/.obsidian/**",
+      "**/.trash/**",
+      "**/opencode.log"
+    ]
+  },
   "permissions": [
     {
       "action": "shell",
